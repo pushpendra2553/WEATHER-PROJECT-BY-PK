@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherForecast</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-600 font-sans">
+
+  <div class="container mx-auto p-8">
+    <h1 class="text-4xl text-center font-bold mb-4">Weather Forecast By PK</h1>
+
+    <div class="mb-8 text-center">
+      <input id="cityInput" type="text" class="p-2 border border-gray-300 rounded-md" placeholder="ENTER YOUR CITY">
+      <button id="searchButton" class="ml-2 px-4 py-2 bg-blue-500 text-white rounded-md">GET DATA</button>
+    </div>
+
+    <div id="errorMessage" class="hidden text-red-600 text-center mb-4"></div>
+
+    <div id="currentWeather" class="hidden text-center">
+      
+      <p id="date" class="text-lg mb-4"></p>
+      <div class="flex justify-center items-center mb-4">
+        <span id="cityName" class="text-2xl font-bold"></span>
+        <span id="weatherIcon" class="ml-2"></span>
+      </div>
+      <p id="temperature" class="text-xl mb-2"></p>
+      <p id="wind" class="text-md mb-2"></p>
+      <p id="humidity" class="text-md"></p>
+    </div>
+
+    <div id="extendedForecast" class="hidden mt-8">
+      <h2 class="text-2xl font-bold text-center mb-4">5-Day Extended Forecast</h2>
+      <div id="forecastContainer" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
